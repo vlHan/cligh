@@ -35,13 +35,13 @@ python3 cligh -u 'GithubUsername'
 examples: 
 
 # see informations about a profile 
-python3 cligh.py -u 'vlHan'
+python3 cligh -u 'vlHan'
 
 # see informations about a repository
-python3 cligh.py -u 'vlHan' -r 'cligh'
+python3 cligh -u 'vlHan' -r 'cligh'
 ```
 
-## Userprofile Search
+### Userprofile Search
 
 <img src="./demo/userprofile.png">
 
