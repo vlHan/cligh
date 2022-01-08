@@ -13,7 +13,7 @@ cligh is a command-line search tool for GitHub.
 ## Installation
 
 Clone this repository: `git clone https://github.com/vlHan/cligh` or <a href="https://github.com/vlHan/cligh/archive/refs/heads/main.zip">download zip</a>
-- Enter the folder: `cd cligh/`
+- Enter the folder: `cd cligh/` or run out of the diretory.
 - Install python3 
   - Linux
     - `sudo apt-get install python3`
@@ -28,9 +28,9 @@ Clone this repository: `git clone https://github.com/vlHan/cligh` or <a href="ht
 
 ## Usage
 ```py
-# usage: 
-python3 cligh.py -u 'GithubUsername'
-        cligh.py -u 'GithubUsername' -r 'RepositoryName'
+# usage (out of the diretory): 
+python3 cligh -u 'GithubUsername'
+        cligh -u 'GithubUsername' -r 'RepositoryName'
 
 examples: 
 

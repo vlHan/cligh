@@ -18,7 +18,7 @@ class App:
         banner()
         parser = argparse.ArgumentParser(
             description=f"CLIGH - Command-line Search tool for GitHub.",
-            usage="python3 \tcligh.py -u 'GithubUsername'\n\t\tcligh.py -u 'GithubUsername' -r 'RepositoryName'",
+            usage="python3 \tcligh -u 'GithubUsername'\n\t\tcligh.py -u 'GithubUsername' -r 'RepositoryName'",
         )
         parser.add_argument(
             "--version", "-v", action="version", version=f"V{__version__}"
