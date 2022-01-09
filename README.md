@@ -9,6 +9,7 @@
 
 cligh is a command-line search tool for GitHub.
 
+This is a project that I developed to learn more about HTTP requests, using the GitHub API :octoact:
 
 ## Installation
 
@@ -28,18 +29,36 @@ Clone this repository: `git clone https://github.com/vlHan/cligh` or <a href="ht
 
 ## Usage
 ```py
+python3 cligh [OPTION]
+
 # usage (out of the diretory): 
-python3 cligh -u 'GithubUsername'
-        cligh -u 'GithubUsername' -r 'RepositoryName'
+python3 cligh -u 'GITHUBUSERNAME'
+        cligh -u 'GITHUBUSERNAME' -r 'REPOSITORYNAME'
+        cligh -u 'GITHUBUSERNAME' -d 'REPOSITORYNAME' -e 'EXTENSION' -rf 'BRANCH'  
 
 examples: 
 
 # see informations about a profile 
-python3 cligh -u 'vlHan'
+python3 cligh -u 'github'
 
 # see informations about a repository
-python3 cligh -u 'vlHan' -r 'cligh'
+python3 cligh -u 'github' -r 'github'
+
+# download a .zip repository 
+python3 cligh -u 'github' -d 'docs' -e 'zip' -rf 'master'  
 ```
+
+## Options
+```
+  -h, --help            show this help message and exit
+  --version, -v         show program's version number and exit
+  -u, --username        The username GitHub account.
+  -r, --repository      The repository from the GitHub user account.
+  -d, --download        Download the user repository.
+  -e, --ext             Repository extension. (zip or tar)
+  -rf, --ref            The repository branch.
+```
+
 
 ### Userprofile Search
 
@@ -48,6 +67,10 @@ python3 cligh -u 'vlHan' -r 'cligh'
 ### Repository Search
 
 <img src="./demo/repository.png">
+
+### Downlaod Repository
+
+<img src="./demo/download_repo.png">
 
 ## License
 This project is under [MIT License](LICENSE)
