@@ -81,18 +81,37 @@ class cligh:
         except requests.ConnectionError:
             raise requests.ConnectionError
 
-        if os.path.isfile(f"{self.repository}.zip") or os.path.isfile(f"{self.repository}.tar"):
-            print(f"{Fore.RED}The repository is already downloaded.{RA}")
-        else:
-            if req.status_code == 200:
-                print(f'{Fore.GREEN}[+] Owner:{RA} {self.username}')
-                print(f'{Fore.GREEN}[+] Diretory:{RA} /cligh/{self.repository}.{ext}')
-                print(f'{Fore.GREEN}[+] Display:{RA} {req.content[:10]}')
-                print(f'{Fore.GREEN}[+] Size:{RA} {len(req.content)}')
-                with open(f"cligh/{self.repository}.{ext}", "wb") as f:
-                    f.write(req.content)
-
-                print(f"\n{Fore.GREEN}Downloaded with success.{RA}")
-
+        try:
+            if os.path.isfile(f"{self.repository}.zip") or os.path.isfile(f"{self.repository}.tar"):
+                print(f"{Fore.RED}The repository is already downloaded.{RA}")
             else:
-                raise RepositoryNotFound
+                if req.status_code == 200:
+                    print(f'{Fore.GREEN}[+] Owner:{RA} {self.username}')
+                    print(f'{Fore.GREEN}[+] Diretory:{RA} /cligh/{self.repository}.{ext}')
+                    print(f'{Fore.GREEN}[+] Display:{RA} {req.content[:10]}')
+                    print(f'{Fore.GREEN}[+] Size:{RA} {len(req.content)}')
+                    with open(f"cligh/{self.repository}.{ext}", "wb") as f:
+                        f.write(req.content)
+
+                    print(f"\n{Fore.GREEN}Downloaded with success.{RA}")
+
+                else:
+                    raise RepositoryNotFound
+        
+        except FileNotFoundError: 
+            if os.path.isfile(f"{self.repository}.zip") or os.path.isfile(f"{self.repository}.tar"):
+                print(f"{Fore.RED}The repository is already downloaded.{RA}")
+            else:
+                if req.status_code == 200:
+                    print(f'{Fore.GREEN}[+] Owner:{RA} {self.username}')
+                    print(f'{Fore.GREEN}[+] Diretory:{RA} /cligh/{self.repository}.{ext}')
+                    print(f'{Fore.GREEN}[+] Display:{RA} {req.content[:10]}')
+                    print(f'{Fore.GREEN}[+] Size:{RA} {len(req.content)}')
+                    with open(f"{self.repository}.{ext}", "wb") as f:
+                        f.write(req.content)
+
+                    print(f"\n{Fore.GREEN}Downloaded with success.{RA}")
+
+                else:
+                    raise RepositoryNotFound
+        
