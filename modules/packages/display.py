@@ -42,9 +42,6 @@ class cligh:
                 f"\n{Fore.GREEN}[+] Blog/Website:{RA} {response['blog']}"
             )
 
-            print(" ")
-            sys.exit(0)
-
         else:
             raise UserNameNotCorrect
 
@@ -67,7 +64,6 @@ class cligh:
                 f"\n{Fore.GREEN}[+] Clone URL:{RA} {response['clone_url']}"
                 f"\n{Fore.GREEN}[+] Languages:{RA} {response['language']}\n"
             )
-            sys.exit(0)
 
         else:
             raise RepositoryNotFound
