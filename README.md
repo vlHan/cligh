@@ -9,7 +9,7 @@
 
 cligh is a command-line search tool for GitHub.
 
-This is a project that I developed to learn more about HTTP requests, using the GitHub API :octoact:
+This is a project that I developed to learn more about HTTP requests, using the GitHub API :octocat:
 
 ## Installation
 
