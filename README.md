@@ -60,17 +60,9 @@ python3 cligh -u 'github' -d 'docs' -e 'zip' -rf 'master'
 ```
 
 
-### Userprofile Search
+### Example
 
-<img src="./demo/userprofile.png">
-
-### Repository Search
-
-<img src="./demo/repository.png">
-
-### Downlaod Repository
-
-<img src="./demo/download_repo.png">
+<img src="./demo/demo.gif">
 
 ## License
 This project is under [MIT License](LICENSE)
