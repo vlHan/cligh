@@ -5,4 +5,3 @@ class UserNameNotCorrect(Exception):
 
 class RepositoryNotFound(Exception): 
     pass
-
