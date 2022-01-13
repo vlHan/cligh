@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import requests
 from colorama import Style, Fore
-import sys, os
+import os
 
 from modules.packages.exceptions import *
 
