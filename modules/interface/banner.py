@@ -9,6 +9,7 @@ def clear() -> None:
 
 
 def banner() -> None:
+    """Terminal banner"""
     clear()
     try:
         with open("modules/interface/ui.txt", "r") as file:
