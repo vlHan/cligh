@@ -28,41 +28,29 @@ Clone this repository: `git clone https://github.com/vlHan/cligh` or <a href="ht
     - Finished!
 
 ## Usage
-```py
-python3 cligh [OPTION]
-
-# usage (out of the diretory): 
-python3 cligh -u 'GITHUBUSERNAME'
-        cligh -u 'GITHUBUSERNAME' -r 'REPOSITORYNAME'
-        cligh -u 'GITHUBUSERNAME' -d 'REPOSITORYNAME' -e 'EXTENSION' -rf 'BRANCH'  
-
-examples: 
-
-# see informations about a profile 
-python3 cligh -u 'github'
-
-# see informations about a repository
-python3 cligh -u 'github' -r 'github'
-
-# download a .zip repository 
-python3 cligh -u 'github' -d 'docs' -e 'zip' -rf 'master'  
 ```
+$ python3 cligh --help
+CLIGH - Command-line Search tool for GitHub.
 
-## Options
-```
+USAGE: 
+  python3 cligh [option] [argument]
+
+OPTION:
   -h, --help            show this help message and exit
   -v, --version         show program's version number and exit
   -u, --username        The username GitHub account.
   -r, --repository      The repository from the GitHub user account.
   -d, --download        Download the user repository.
   -e, --ext             Repository extension. (zip or tar)
-  -rf, --ref            The repository branch.
+  -rf, --ref            The repository branch. 
 ```
 
 
 ### Example
-
 <img src="./demo/demo.gif">
+
+## Contributing 
+Check the [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
 This project is under [MIT License](LICENSE)

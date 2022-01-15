@@ -22,7 +22,7 @@ class App:
         banner()
         parser = argparse.ArgumentParser(
             description=f"CLIGH - Command-line Search tool for GitHub.",
-            usage="python3 \tcligh -u 'GithubUsername'\n\t\tcligh.py -u 'GithubUsername' -r 'RepositoryName'\n\t\tcligh -u 'vlHan' -d 'cligh' -e 'zip' -rf 'master'",
+            usage="python3 cligh [option] [argument]",
         )
         parser.add_argument(
             "--version", "-v", action="version", version=f"v{__version__}"
