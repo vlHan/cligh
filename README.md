@@ -51,7 +51,7 @@ python3 cligh -u 'github' -d 'docs' -e 'zip' -rf 'master'
 ## Options
 ```
   -h, --help            show this help message and exit
-  --version, -v         show program's version number and exit
+  -v, --version         show program's version number and exit
   -u, --username        The username GitHub account.
   -r, --repository      The repository from the GitHub user account.
   -d, --download        Download the user repository.
