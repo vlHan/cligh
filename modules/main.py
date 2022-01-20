@@ -21,7 +21,7 @@ class App:
         """
         banner()
         parser = argparse.ArgumentParser(
-            description=f"CLIGH - Command-line Search tool for GitHub.",
+            description='CLIGH - Command-line Search tool for GitHub.',
             usage="python3 cligh [option] [argument]",
         )
         parser.add_argument(
@@ -45,14 +45,14 @@ class App:
         )
         args = parser.parse_args()
 
-        if not args.username or not args.username:
+        if not args.username:
             parser.print_help()
             sys.exit(1)
 
         return args
 
     @staticmethod
-    def main():
+    def main() -> None:
         """Main function to run the program
         """
         args = App._arguments()
