@@ -64,15 +64,11 @@ class App:
 
             if args.username and args.repository and not args.download:
                 endpoint = f"repos/{args.username}/{args.repository}"
-                return cligh(
-                    args.username, args.repository, endpoint
-                ).display_repository()
+                return cligh(args.username, args.repository, endpoint).display_repository()
 
             if args.username and args.download:
                 endpoint = f'repos/{args.username}/{args.download}/{args.ext}ball/{args.ref}'
-                return cligh(
-                        args.username, args.download, endpoint
-                    ).download_repository(args.ext)
+                return cligh(args.username, args.download, endpoint).download_repository(args.ext)
             
         except requests.ConnectionError:
             print(
