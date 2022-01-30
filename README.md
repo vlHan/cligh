@@ -6,10 +6,9 @@
    <img alt="License" src="https://img.shields.io/github/license/vlHan/cligh.svg">
 </p>
 
+<img src="./demo/demo.gif">
 
-cligh is a command-line search tool for GitHub.
-
-This is a project that I developed to learn more about HTTP requests, using the GitHub API :octocat:
+> Command-line search tool for GitHub. This is a project that I developed to learn more about HTTP requests, using the GitHub API 
 
 ## Installation
 
@@ -44,10 +43,6 @@ OPTION:
   -e, --ext             Repository extension. (zip or tar)
   -rf, --ref            The repository branch. 
 ```
-
-
-### Example
-<img src="./demo/demo.gif">
 
 ## Contributing 
 Check the [CONTRIBUTING.md](CONTRIBUTING.md)
