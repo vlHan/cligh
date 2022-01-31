@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 import argparse
 import requests
@@ -73,12 +72,12 @@ class App:
         except requests.ConnectionError:
             print(
                 "Connection Error:",
-                end=" " f"{Fore.RED}Could not connect with the GitHub API.{RA}",
+                end=" " "[red]Could not connect with the GitHub API.[/]",
             )
         except UserNameNotCorrect:
-            print(f"{Fore.RED}The username is not correct.{RA}")
+            print("[red]The username is not correct.[/]")
         except RepositoryNotFound: 
-            print(f"{Fore.RED}Could not found the requested repository.{RA}")
+            print("[red]Could not found the requested repository.[/]")
 
     def run(self):
         """This function use main() and count the time

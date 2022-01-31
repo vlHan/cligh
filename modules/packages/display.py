@@ -1,6 +1,5 @@
-# -*- coding: utf-8 -*-
 import requests
-from colorama import Style, Fore
+from rich import print
 import os
 
 from modules.packages.exceptions import *
@@ -10,7 +9,6 @@ __version__ = "1.1"
 __license__ = "MIT"
 
 GITHUB_API_BASE = "https://api.github.com/"
-RA = Style.RESET_ALL
 
 
 class cligh:
@@ -32,16 +30,16 @@ class cligh:
         if req.status_code == 200:
             raise UserNameNotCorrect
 
-        print(f"{Fore.CYAN}User Informations:{RA}\n")
+        print("[cyan]User Informations:[/]\n")
         print(
-            f"{Fore.GREEN}[+] Username:{RA} {response['login']}"
-            f"\n{Fore.GREEN}[+] ID:{RA} {response['id']}"
-            f"\n{Fore.GREEN}[+] Bio:{RA} {response['bio']}"
-            f"\n{Fore.GREEN}[+] Location:{RA} {response['location']}"
-            f"\n{Fore.GREEN}[+] Company:{RA} {response['company']}"
-            f"\n{Fore.GREEN}[+] Web URL:{RA} {response['html_url']}"
-            f"\n{Fore.GREEN}[+] Public Repos:{RA} {response['public_repos']}"
-            f"\n{Fore.GREEN}[+] Blog/Website:{RA} {response['blog']}"
+            f"[green][+] Username:[/] {response['login']}"
+            f"\n[green][+] ID:[/] {response['id']}"
+            f"\n[green][+] Bio:[/] {response['bio']}"
+            f"\n[green][+] Location:[/] {response['location']}"
+            f"\n[green][+] Company:[/] {response['company']}"
+            f"\n[green][+] Web URL:[/] {response['html_url']}"
+            f"\n[green][+] Public Repos:[/] {response['public_repos']}"
+            f"\n[green][+] Blog/Website:[/] {response['blog']}"
         )
 
     def display_repository(self) -> None:
@@ -55,14 +53,14 @@ class cligh:
 
         if req.status_code == 200:
             raise RepositoryNotFound
-        print(f"{Fore.CYAN}Repository Informations:{RA}\n")
+        print("[cyan]Repository Informations:[/]\n")
         print(
-            f"{Fore.GREEN}[+] Repository:{RA} {response['name']}"
-            f"\n{Fore.GREEN}[+] Description:{RA} {response['description']}"
-            f"\n{Fore.GREEN}[+] Stars:{RA} {response['stargazers_count']}"
-            f"\n{Fore.GREEN}[+] Created at:{RA} {response['created_at']}"
-            f"\n{Fore.GREEN}[+] Clone URL:{RA} {response['clone_url']}"
-            f"\n{Fore.GREEN}[+] Languages:{RA} {response['language']}\n"
+            f"[green][+] Repository:[/] {response['name']}"
+            f"\n[green][+] Description:[/] {response['description']}"
+            f"\n[green][+] Stars:[/] {response['stargazers_count']}"
+            f"\n[green][+] Created at:[/] {response['created_at']}"
+            f"\n[green][+] Clone URL:[/] {response['clone_url']}"
+            f"\n[green][+] Languages:[/] {response['language']}\n"
         )
 
     def download_repository(self, ext) -> None:
@@ -76,32 +74,32 @@ class cligh:
 
         try:
             if os.path.isfile(f"{self.repository}.zip") or os.path.isfile(f"{self.repository}.tar"):
-                print(f"{Fore.RED}The repository is already downloaded.{RA}")
+                print("[red]The repository is already downloaded.[/]")
             else:
                 if req.status_code == 200:
                     raise RepositoryNotFound
 
-                print(f'{Fore.GREEN}[+] Owner:{RA} {self.username}')
-                print(f'{Fore.GREEN}[+] Diretory:{RA} /cligh/{self.repository}.{ext}')
-                print(f'{Fore.GREEN}[+] Display:{RA} {req.content[:10]}')
-                print(f'{Fore.GREEN}[+] Size:{RA} {len(req.content)}')
+                print(f'[green][+] Owner:[/] {self.username}')
+                print(f'[green][+] Diretory:[/] /cligh/{self.repository}.{ext}')
+                print(f'[green][+] Display:[/] {req.content[:10]}')
+                print(f'[green][+] Size:[/] {len(req.content)}')
                 with open(f"cligh/{self.repository}.{ext}", "wb") as f:
                     f.write(req.content)
 
-                print(f"\n{Fore.GREEN}Downloaded with success.{RA}")
+                print("\n[green]Downloaded with success.[/]")
         
         except FileNotFoundError: 
             if os.path.isfile(f"{self.repository}.zip") or os.path.isfile(f"{self.repository}.tar"):
-                print(f"{Fore.RED}The repository is already downloaded.{RA}")
+                print("[red]The repository is already downloaded.[/]")
             else:
                 if req.status_code == 200:
                     raise RepositoryNotFound
 
-                print(f'{Fore.GREEN}[+] Owner:{RA} {self.username}')
-                print(f'{Fore.GREEN}[+] Diretory:{RA} /cligh/{self.repository}.{ext}')
-                print(f'{Fore.GREEN}[+] Display:{RA} {req.content[:10]}')
-                print(f'{Fore.GREEN}[+] Size:{RA} {len(req.content)}')
+                print(f'[green][+] Owner:[/] {self.username}')
+                print(f'[green][+] Diretory:[/] /cligh/{self.repository}.{ext}')
+                print(f'[green][+] Display:[/] {req.content[:10]}')
+                print(f'[green][+] Size:[/] {len(req.content)}')
                 with open(f"{self.repository}.{ext}", "wb") as f:
                     f.write(req.content)
 
-                print(f"\n{Fore.GREEN}Downloaded with success.{RA}")
+                print("\n[green]Downloaded with success.[/]")

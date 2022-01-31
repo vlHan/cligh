@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from modules.main import *
 
 __author__ = "vlHan"
