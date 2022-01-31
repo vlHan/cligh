@@ -1,15 +1,13 @@
-# cligh
+<h1>cligh</h1>
 
 <p>
-   <img alt="Languages" src="https://img.shields.io/badge/Python->=3.0-blue.svg"> 
+   <img alt="Languages" src="https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20%7C%203.8-blue.svg"> 
    <img alt="Repository size" src="https://img.shields.io/github/repo-size/vlHan/cligh">
    <img alt="License" src="https://img.shields.io/github/license/vlHan/cligh.svg">
+   <img alt="Build" src="https://img.shields.io/badge/build-Passing-green">
 </p>
 
-
-cligh is a command-line search tool for GitHub.
-
-This is a project that I developed to learn more about HTTP requests, using the GitHub API :octocat:
+> Command-line search tool for GitHub. This is a project that I developed to learn more about HTTP requests, using the GitHub API</p>
 
 ## Installation
 
@@ -17,8 +15,6 @@ Clone this repository: `git clone https://github.com/vlHan/cligh` or <a href="ht
 - Enter the folder: `cd cligh/` or run out of the diretory.
 - Install python3 
   - Linux
-    - `sudo apt-get install python3`
-    - `chmod +x *`
     - `python3 -m pip install -r requirements.txt`
     - Finished!
 
@@ -45,13 +41,11 @@ OPTION:
   -rf, --ref            The repository branch. 
 ```
 
-
-### Example
-<img src="./demo/demo.gif">
-
 ## Contributing 
 Check the [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
-This project is under [MIT License](LICENSE)
+This project is under license. See the [LICENSE](LICENSE) file for more details.
+
+[⬆ Voltar ao topo](#cligh)<br>
 
