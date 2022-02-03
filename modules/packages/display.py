@@ -27,7 +27,7 @@ class cligh:
         except requests.ConnectionError:
             raise requests.ConnectionError
 
-        if req.status_code == 200:
+        if "message" in response:
             raise UserNameNotCorrect
 
         print("[cyan]User Informations:[/]\n")
@@ -51,7 +51,7 @@ class cligh:
         except requests.ConnectionError:
             raise requests.ConnectionError
 
-        if req.status_code == 200:
+        if "message" in response:
             raise RepositoryNotFound
         print("[cyan]Repository Informations:[/]\n")
         print(
@@ -76,7 +76,7 @@ class cligh:
             if os.path.isfile(f"{self.repository}.zip") or os.path.isfile(f"{self.repository}.tar"):
                 print("[red]The repository is already downloaded.[/]")
             else:
-                if req.status_code == 200:
+                if "message" in response:
                     raise RepositoryNotFound
 
                 print(f'[green][+] Owner:[/] {self.username}')
@@ -92,7 +92,7 @@ class cligh:
             if os.path.isfile(f"{self.repository}.zip") or os.path.isfile(f"{self.repository}.tar"):
                 print("[red]The repository is already downloaded.[/]")
             else:
-                if req.status_code == 200:
+                if "message" in response:
                     raise RepositoryNotFound
 
                 print(f'[green][+] Owner:[/] {self.username}')
