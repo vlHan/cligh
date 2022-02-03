@@ -76,7 +76,7 @@ class cligh:
             if os.path.isfile(f"{self.repository}.zip") or os.path.isfile(f"{self.repository}.tar"):
                 print("[red]The repository is already downloaded.[/]")
             else:
-                if "message" in response:
+                if req.status_code == 200:
                     raise RepositoryNotFound
 
                 print(f'[green][+] Owner:[/] {self.username}')
@@ -92,7 +92,7 @@ class cligh:
             if os.path.isfile(f"{self.repository}.zip") or os.path.isfile(f"{self.repository}.tar"):
                 print("[red]The repository is already downloaded.[/]")
             else:
-                if "message" in response:
+                if req.status_code == 200:
                     raise RepositoryNotFound
 
                 print(f'[green][+] Owner:[/] {self.username}')
