@@ -11,7 +11,7 @@
 
 ## Installation
 
-Clone this repository: `git clone https://github.com/vlHan/cligh` or <a href="https://github.com/vlHan/cligh/archive/refs/heads/main.zip">download zip</a>
+Clone this repository: `git clone https://github.com/vlHan/cligh` or <a href="https://github.com/vlHan/cligh/archive/refs/heads/master.zip">download zip</a>
 - Enter the folder: `cd cligh/` or run out of the diretory.
 - Install python3 
   - Linux
