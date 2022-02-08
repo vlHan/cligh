@@ -18,7 +18,7 @@ Clone this repository: `git clone https://github.com/vlHan/cligh` or <a href="ht
     - `python3 -m pip install -r requirements.txt`
     - Finished!
 
-  - Windows and Mac
+  - Windows and macOS
     - [Python 3, download and install](https://www.python.org/downloads/)
     - `python -m pip install -r requirements.txt`
     - Finished!
