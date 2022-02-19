@@ -1,7 +1,7 @@
 <h1>cligh</h1>
 
 <p>
-   <img alt="Languages" src="https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20%7C%203.8-blue.svg"> 
+   <img alt="Languages" src="https://img.shields.io/badge/python->=3.7-blue.svg"> 
    <img alt="Repository size" src="https://img.shields.io/github/repo-size/vlHan/cligh">
    <img alt="License" src="https://img.shields.io/github/license/vlHan/cligh.svg">
    <img alt="Build" src="https://img.shields.io/badge/build-Passing-green">
