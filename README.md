@@ -45,7 +45,7 @@ OPTION:
 Check the [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
-This project is under license. See the [LICENSE](LICENSE) file for more details.
+This project is under MIT license. See the [LICENSE](LICENSE) file for more details.
 
 [⬆ Voltar ao topo](#cligh)<br>
 
