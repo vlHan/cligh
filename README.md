@@ -29,7 +29,7 @@ $ python3 cligh --help
 CLIGH - Command-line Search tool for GitHub.
 
 USAGE: 
-  python3 cligh [option] [argument]
+  python3 cligh -[option] --[argument]
 
 OPTION:
   -h, --help            show this help message and exit
